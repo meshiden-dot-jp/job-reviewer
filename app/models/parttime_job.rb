@@ -12,4 +12,7 @@ class ParttimeJob < ApplicationRecord
         "IT",
         "その他"
     ]
+
+    validates :name, presence: true, length: { maximum: 100 }
+    validates :category, presence: true, inclusion: { in: CATEGORIES }
 end
