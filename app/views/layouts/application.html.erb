@@ -22,6 +22,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if logged_in? %>
+      <p>ようこそ、<%= current_user.name %> さん！</p>
+      <%= button_to "ログアウト", logout_path, method: :delete %>
+    <% else %>
+      <%= link_to "ログイン", login_path %>
+    <% end %>
+
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
