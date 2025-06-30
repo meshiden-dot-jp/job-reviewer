@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @parttime_job %>
-
 <div>
-  <%= link_to "Edit this parttime job", edit_parttime_job_path(@parttime_job) %> |
-  <%= link_to "Back to parttime jobs", parttime_jobs_path %>
+  <%= render @parttime_job %>
 
-  <%= button_to "Destroy this parttime job", @parttime_job, method: :delete %>
+  <div>
+    <%= link_to "このお仕事を編集する", edit_parttime_job_path(@parttime_job) %> |
+    <%= link_to "お仕事リストに戻る", parttime_jobs_path %>
+
+    <%= button_to "このお仕事を削除する", @parttime_job, method: :delete %>
+  </div>
 </div>

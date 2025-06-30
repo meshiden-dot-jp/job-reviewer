@@ -12,18 +12,18 @@
   <% end %>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.label "名前", style: "display: block" %>
+    <%= form.text_field :name, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
   </div>
 
   <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+    <%= form.label "メールアドレス", style: "display: block" %>
+    <%= form.text_field :email, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
   </div>
 
   <div>
-    <%= form.label :password_digest, style: "display: block" %>
-    <%= form.text_field :password_digest %>
+    <%= form.label "パスワード", style: "display: block" %>
+    <%= form.text_field :password_digest, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
   </div>
 
   <div>

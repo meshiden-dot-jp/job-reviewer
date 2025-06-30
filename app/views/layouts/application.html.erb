@@ -21,16 +21,17 @@
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <% if logged_in? %>
-      <p>ようこそ、<%= current_user.name %> さん！</p>
-      <%= button_to "ログアウト", logout_path, method: :delete %>
-    <% else %>
-      <%= link_to "ログイン", login_path %>
-    <% end %>
-
-    <main>
-      <%= yield %>
+  <body class="flex flex-col min-h-screen">
+    <%= render HeaderComponent.new %>
+    <main class="w-full bg-[#f5f6f6] block flex-grow">
+      <div class="sm:w-[70%] w-[90%] m-auto">
+        <div class="pt-[60px]">
+          <div class=" bg-white my-8 pb-16 sm:px-16 px-4 sm:rounded-[24px] rounded-[12px]">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
     </main>
+    <%= render FooterComponent.new %>
   </body>
 </html>

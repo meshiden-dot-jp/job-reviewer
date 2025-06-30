@@ -2,15 +2,17 @@
 
 <% content_for :title, "Parttime jobs" %>
 
-<h1>お仕事を調べてみようね♡</h1>
+<div>
+  <h1>〇〇のシゴト</h1>
 
-<div id="parttime_jobs">
-  <% @parttime_jobs.each do |parttime_job| %>
-    <%= render parttime_job %>
-    <p>
-      <%= link_to "Show this parttime job", parttime_job %>
-    </p>
-  <% end %>
+  <div id="parttime_jobs">
+    <% @parttime_jobs.each do |parttime_job| %>
+      <%= render parttime_job %>
+      <p>
+        <%= link_to "Show this parttime job", parttime_job %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New parttime job", new_parttime_job_path %>
 </div>
-
-<%= link_to "New parttime job", new_parttime_job_path %>
