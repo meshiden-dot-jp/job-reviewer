@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_30_073336) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_30_073518) do
   create_table "parttime_jobs", force: :cascade do |t|
     t.string "name"
     t.string "category"
@@ -28,6 +28,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_30_073336) do
     t.datetime "updated_at", null: false
     t.index ["parttime_job_id"], name: "index_reviews_on_parttime_job_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "reviews", "parttime_jobs"

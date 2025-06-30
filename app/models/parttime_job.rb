@@ -13,6 +13,8 @@ class ParttimeJob < ApplicationRecord
         "その他"
     ]
 
+    has_many :reviews
+
     validates :name, presence: true, length: { maximum: 100 }
     validates :category, presence: true, inclusion: { in: CATEGORIES }
 end

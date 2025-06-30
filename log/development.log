@@ -552,3 +552,378 @@ FOREIGN KEY ("parttime_job_id")
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630073336') RETURNING "version" /*application='Job'*/[0m
   [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Job'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Job'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+Migrating to CreateUsers (20250630073518)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Job'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Job'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250630073518') RETURNING "version" /*application='Job'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Job'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:38:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.6ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 7.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.2ms)
+Completed 200 OK in 26ms (Views: 8.9ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:38:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.2ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-34ccfab4.css" for 100.70.12.56 at 2025-06-30 16:38:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.3ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 7.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-4518fff6.css" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.woff2' for missing asset 'fonts/LINESeedJP_OTF_Rg.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.ttf' for missing asset 'fonts/LINESeedJP_OTF_Rg.ttf' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.woff2' for missing asset 'fonts/LINESeedJP_OTF_Bd.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.ttf' for missing asset 'fonts/LINESeedJP_OTF_Bd.ttf' in application.css
+Started GET "/fonts/LINESeedJP_OTF_Bd.woff2" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/LINESeedJP_OTF_Rg.woff2" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.woff2"):
+  
+Started GET "/fonts/LINESeedJP_OTF_Bd.ttf" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/LINESeedJP_OTF_Rg.ttf" for 100.70.12.56 at 2025-06-30 16:39:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.ttf"):
+  
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:44:59 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.7ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 7.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/fonts/LINESeedJP_OTF_Rg.woff2" for 100.70.12.56 at 2025-06-30 16:44:59 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/LINESeedJP_OTF_Bd.woff2" for 100.70.12.56 at 2025-06-30 16:44:59 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.woff2"):
+  
+Started GET "/fonts/LINESeedJP_OTF_Rg.ttf" for 100.70.12.56 at 2025-06-30 16:44:59 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/LINESeedJP_OTF_Bd.ttf" for 100.70.12.56 at 2025-06-30 16:44:59 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.ttf"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.ttf"):
+  
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:45:12 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (2.1ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 15.7ms | GC: 7.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | GC: 7.7ms)
+Completed 200 OK in 31ms (Views: 15.9ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 10.0ms)
+
+
+Started GET "/fonts/LINESeedJP_OTF_Rg.woff2" for 100.70.12.56 at 2025-06-30 16:45:12 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.woff2"):
+  
+Started GET "/fonts/LINESeedJP_OTF_Bd.woff2" for 100.70.12.56 at 2025-06-30 16:45:12 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.woff2"):
+  
+Started GET "/fonts/LINESeedJP_OTF_Rg.ttf" for 100.70.12.56 at 2025-06-30 16:45:12 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Rg.ttf"):
+  
+Started GET "/fonts/LINESeedJP_OTF_Bd.ttf" for 100.70.12.56 at 2025-06-30 16:45:12 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/LINESeedJP_OTF_Bd.ttf"):
+  
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:45:50 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.5ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 8.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/parttime_jobs/1" for 100.70.12.56 at 2025-06-30 16:46:08 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mParttimeJob Load (0.2ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" WHERE "parttime_jobs"."id" = 1 LIMIT 1 /*action='show',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/controllers/parttime_jobs_controller.rb:63:in 'ParttimeJobsController#set_parttime_job'
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/show.html.erb within layouts/application
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/show.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 3.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:49:11 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.8ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 10.3ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | GC: 2.0ms)
+Completed 200 OK in 23ms (Views: 11.1ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:49:29 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.7ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 8.6ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 1.0ms)
+Completed 200 OK in 22ms (Views: 9.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:51:07 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.8ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 7.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 8.9ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-a37f6d71.css" for 100.70.12.56 at 2025-06-30 16:51:07 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.woff2' for missing asset 'fonts/LINESeedJP_OTF_Rg.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.ttf' for missing asset 'fonts/LINESeedJP_OTF_Rg.ttf' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.woff2' for missing asset 'fonts/LINESeedJP_OTF_Bd.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.ttf' for missing asset 'fonts/LINESeedJP_OTF_Bd.ttf' in application.css
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:52:09 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.7ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 8.6ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | GC: 1.1ms)
+Completed 200 OK in 26ms (Views: 9.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 5.6ms)
+
+
+Started GET "/parttime_jobs/1" for 100.70.12.56 at 2025-06-30 16:53:43 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mParttimeJob Load (0.3ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" WHERE "parttime_jobs"."id" = 1 LIMIT 1 /*action='show',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/controllers/parttime_jobs_controller.rb:63:in 'ParttimeJobsController#set_parttime_job'
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/show.html.erb within layouts/application
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered parttime_jobs/show.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 4.7ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 100.70.12.56 at 2025-06-30 16:54:32 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 16:55:04 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.7ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 7.9ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.4ms)
+Completed 200 OK in 20ms (Views: 8.7ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/" for 100.70.12.56 at 2025-06-30 16:55:22 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 100.70.12.56 at 2025-06-30 16:56:01 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/parttime_jobs" for 100.70.11.201 at 2025-06-30 16:57:18 +0900
+Cannot render console from 100.70.11.201! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.7ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 8.4ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-a37f6d71.css" for 100.70.11.201 at 2025-06-30 16:57:18 +0900
+Cannot render console from 100.70.11.201! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.woff2' for missing asset 'fonts/LINESeedJP_OTF_Rg.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.ttf' for missing asset 'fonts/LINESeedJP_OTF_Rg.ttf' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.woff2' for missing asset 'fonts/LINESeedJP_OTF_Bd.woff2' in application.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.ttf' for missing asset 'fonts/LINESeedJP_OTF_Bd.ttf' in application.css
+Started GET "/" for 100.70.30.20 at 2025-06-30 16:58:11 +0900
+Cannot render console from 100.70.30.20! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/apple-touch-icon-precomposed.png" for 100.70.30.20 at 2025-06-30 16:58:13 +0900
+Cannot render console from 100.70.30.20! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/apple-touch-icon.png" for 100.70.30.20 at 2025-06-30 16:58:13 +0900
+Started GET "/favicon.ico" for 100.70.30.20 at 2025-06-30 16:58:13 +0900
+Cannot render console from 100.70.30.20! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 100.70.30.20! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon-precomposed.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/apple-touch-icon.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 100.70.12.56 at 2025-06-30 16:58:35 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 100.70.12.56 at 2025-06-30 16:58:37 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/user/.rbenv/versions/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/parttime_jobs" for 100.70.12.56 at 2025-06-30 17:07:36 +0900
+Cannot render console from 100.70.12.56! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ParttimeJobsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (1.1ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:8
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 10.4ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
