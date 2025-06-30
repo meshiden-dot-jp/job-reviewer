@@ -1,0 +1,12 @@
+<% content_for :title, "Editing parttime job" %>
+
+<h1>Editing parttime job</h1>
+
+<%= render "form", parttime_job: @parttime_job %>
+
+<br>
+
+<div>
+  <%= link_to "Show this parttime job", @parttime_job %> |
+  <%= link_to "Back to parttime jobs", parttime_jobs_path %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @parttime_job %>
+
+<div>
+  <%= link_to "Edit this parttime job", edit_parttime_job_path(@parttime_job) %> |
+  <%= link_to "Back to parttime jobs", parttime_jobs_path %>
+
+  <%= button_to "Destroy this parttime job", @parttime_job, method: :delete %>
+</div>

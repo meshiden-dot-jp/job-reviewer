@@ -1,0 +1,2 @@
+module ParttimeJobsHelper
+end
