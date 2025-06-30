@@ -1,6 +1,7 @@
 require "active_support/core_ext/integer/time"
 
-Rails.application.configure do
+Rails.application.configure do 
+  config.hosts << "dtmc.sw.it.aoyama.ac.jp"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Make code changes take effect immediately without server restart.
