@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label "シゴトの名前" %><br>
+    <%= form.label "シゴトの名前", style: "display: block" %>
     <%= form.text_field :name, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
   </div>
 
   <div>
-    <%= form.label "シゴトのカテゴリー"%><br>
-<%= form.select :category, ParttimeJob::CATEGORIES, {}, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
+    <%= form.label "シゴトのカテゴリー", style: "display: block" %>
+    <%= form.select :category, ParttimeJob::CATEGORIES, {}, class: "w-full border-[2px] rounded-[12px] px-6 py-8 appearance-none" %>
   </div>
 
   <div>
-    <%= form.submit "追加する", class: "w-full mt-12 bg-blue-600 text-white px-4 py-2 rounded-[8px] hover:bg-blue-600"  %>
+    <%= form.submit "追加する", class: "w-full mt-12 bg-blue-600 text-white px-4 py-2 rounded-[8px] hover:bg-blue-600" %>
   </div>
 <% end %>

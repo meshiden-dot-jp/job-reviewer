@@ -27,6 +27,9 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "アカウントを作成する" , class: "w-full mt-12 bg-blue-600 text-white px-4 py-2 rounded-[8px] hover:bg-blue-600" %>
+  </div>
+  <div class="mt-4">
+    <p class="text-center">すでにアカウントをお持ちですか？<br> <%= link_to "ログイン", login_path, class: "border-b" %></p>
   </div>
 <% end %>
