@@ -5,9 +5,7 @@
 
     <% if helpers.logged_in? %>
     <div class="flex items-center space-x-4">
-    <p class="mb-0"><%= helpers.current_user.name %></p>
-    <%= button_to "ログアウト", logout_path, method: :delete, class: "font-bold px-4 py-1 bg-blue-600 text-white rounded-[99px]" %>
-    </div>
+    <%= button_to "ログアウト", logout_path, method: :delete, class: "font-bold px-4 py-1 bg-blue-600 text-white rounded-[99px]" %>    </div>
 
     <% else %>
     <%= link_to "ログイン", login_path, class: "font-bold px-4 py-1 bg-blue-600 text-white rounded-[99px]" %>

@@ -2,17 +2,21 @@
 
 <% content_for :title, "Parttime jobs" %>
 
-<div>
-  <h1>〇〇のシゴト</h1>
+<div class="max-w-2xl mx-auto px-4">
+  <h1 class="text-2xl font-bold mb-6"><%= params[:category].presence || "すべて" %>のシゴト</h1>
 
-  <div id="parttime_jobs">
+  <div id="parttime_jobs" class="space-y-6">
     <% @parttime_jobs.each do |parttime_job| %>
-      <%= render parttime_job %>
-      <p>
-        <%= link_to "Show this parttime job", parttime_job %>
-      </p>
+      <div class="border-b pb-4">
+        <h2 class="text-xl font-semibold"><%= parttime_job.name %></h2>
+        <p class="text-gray-600">職種: <%= parttime_job.category %></p>
+        <%= link_to "▶ 詳細を見る", parttime_job_path(parttime_job), class: "text-blue-600 hover:underline text-sm" %>
+      </div>
     <% end %>
   </div>
 
-  <%= link_to "New parttime job", new_parttime_job_path %>
+  <div class="mt-10">
+    <%= link_to "＋ お仕事を追加", new_parttime_job_path, class: "text-blue-700 font-medium hover:underline" %>
+  </div>
 </div>
+

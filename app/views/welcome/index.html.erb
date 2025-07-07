@@ -1,5 +1,15 @@
-<div>
-    <div>
-        <h1>自分にあうシゴトを探そう ──</h1>
-    </div>
+<div class="w-full">
+  <div>
+    <h1>自分にあうシゴトを探そう ──</h1>
+  </div>
+  <div class="grid sm:grid-cols-4 grid-cols-2">
+    <% @categories.each do |category| %>
+      <%= link_to parttime_jobs_path(category: category), class: "border border-gray-200 flex items-center justify-between sm:px-6 px-4 py-4 hover:bg-blue-600 hover:text-white transition-colors duration-100" do %>
+        <span><%= category %></span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      <% end %>
+    <% end %>
+  </div>
 </div>

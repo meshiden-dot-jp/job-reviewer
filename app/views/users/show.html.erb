@@ -2,9 +2,21 @@
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+<p>
+  <strong>名前：</strong>
+  <%= @user.name %>
+</p>
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
+<p>
+  <strong>メールアドレス：</strong>
+  <%= @user.email %>
+</p>
+
+<div>
+  <%= link_to "このユーザーを編集", edit_user_path(@user) %><br>
+  <%= button_to "このユーザーを削除", @user, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+</div>
+
+<div>
+ <%= link_to "ホームに戻る", root_path %>
 </div>

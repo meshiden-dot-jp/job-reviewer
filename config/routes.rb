@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root "welcome#index"
   resources :users
   resources :reviews
-  resources :parttime_jobs
+  resources :parttime_jobs do
+    resources :reviews, only: [:create]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get    'login',  to: 'sessions#new'
   post   'login',  to: 'sessions#create'

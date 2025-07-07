@@ -3,11 +3,17 @@ class ParttimeJobsController < ApplicationController
 
   # GET /parttime_jobs or /parttime_jobs.json
   def index
-    @parttime_jobs = ParttimeJob.all
+    if params[:category].present?
+      @parttime_jobs = ParttimeJob.where(category: params[:category])
+    else
+      @parttime_jobs = ParttimeJob.all
+    end
   end
 
   # GET /parttime_jobs/1 or /parttime_jobs/1.json
   def show
+    @review = Review.new
+    @reviews = @parttime_job.reviews.includes(:user)
   end
 
   # GET /parttime_jobs/new
@@ -60,11 +66,10 @@ class ParttimeJobsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_parttime_job
-      @parttime_job = ParttimeJob.find(params.expect(:id))
+      @parttime_job = ParttimeJob.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def parttime_job_params
-      params.expect(parttime_job: [ :name, :category ])
+      params.require(:parttime_job).permit(:name, :category)
     end
 end

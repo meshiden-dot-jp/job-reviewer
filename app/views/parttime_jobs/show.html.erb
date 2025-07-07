@@ -3,10 +3,30 @@
 <div>
   <%= render @parttime_job %>
 
-  <div>
-    <%= link_to "このお仕事を編集する", edit_parttime_job_path(@parttime_job) %> |
-    <%= link_to "お仕事リストに戻る", parttime_jobs_path %>
+  <% @reviews.each do |review| %>
+    <div>
+      <strong><%= review.user.name %></strong>
 
-    <%= button_to "このお仕事を削除する", @parttime_job, method: :delete %>
-  </div>
+      <p>
+        <% 5.times do |i| %>
+          <%= i < review.rating ? "★" : "☆" %>
+        <% end %>
+      </p>
+
+      <p><%= review.content %></p>
+    </div>
+  <% end %>
+
+  <% if logged_in? %>
+    <%= form_with(model: [@parttime_job, @review], local: true) do |f| %>
+      <%= f.label :rating, "評価（1〜5）" %><br>
+      <%= f.select :rating, options_for_select(1..5), {}, class: "mb-2" %><br>
+
+      <%= f.label :content, "レビューを書く" %><br>
+      <%= f.text_area :content %><br>
+      <%= f.submit "投稿" %>
+    <% end %>
+  <% else %>
+    <p>ログインするとレビューを投稿できます。</p>
+  <% end %>
 </div>
