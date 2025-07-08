@@ -1,32 +1,32 @@
-<p style="color: green"><%= notice %></p>
-
 <div>
   <%= render @parttime_job %>
 
-  <% @reviews.each do |review| %>
-    <div>
-      <strong><%= review.user.name %></strong>
+  <div class="my-8">
+      <% @reviews.each do |review| %>
+      <div class="border-b border-gray-300 py-4 last:border-b-0">
+        <strong><%= review.user.name %></strong>
 
-      <p>
-        <% 5.times do |i| %>
-          <%= i < review.rating ? "★" : "☆" %>
-        <% end %>
-      </p>
+        <p>
+          <% 5.times do |i| %>
+            <%= i < review.rating ? "★" : "☆" %>
+          <% end %>
+        </p>
 
-      <p><%= review.content %></p>
-    </div>
-  <% end %>
+        <p><%= review.content %></p>
+      </div>
+    <% end %>
+  </div>
 
   <% if logged_in? %>
     <%= form_with(model: [@parttime_job, @review], local: true) do |f| %>
-      <%= f.label :rating, "評価（1〜5）" %><br>
-      <%= f.select :rating, options_for_select(1..5), {}, class: "mb-2" %><br>
+      <%= f.label :rating, "評価（1〜5）", style: "display: block" %>
+      <%= f.select :rating, options_for_select(1..5), {}, class: "w-full border-[2px] rounded-[12px] px-6 py-2 appearance-none" %>
 
-      <%= f.label :content, "レビューを書く" %><br>
-      <%= f.text_area :content %><br>
-      <%= f.submit "投稿" %>
+      <%= f.label :content, "レビューを書く", style: "display: block" %>
+      <%= f.text_area :content, class: "w-full border-[2px] rounded-[12px] px-6 py-2" %>
+      <%= f.submit "投稿", class: "w-full mt-12 bg-blue-600 text-white px-4 py-2 rounded-[8px] hover:bg-blue-600" %>
     <% end %>
   <% else %>
-    <p>ログインするとレビューを投稿できます。</p>
+    <p class="text-center w-full mt-12 bg-[#3a3c3c] text-white px-4 py-2 rounded-[8px]">ログインするとレビューを投稿できます。</p>
   <% end %>
 </div>

@@ -1,22 +1,24 @@
-<p style="color: green"><%= notice %></p>
-
 <% content_for :title, "Parttime jobs" %>
 
-<div class="max-w-2xl mx-auto px-4">
-  <h1 class="text-2xl font-bold mb-6"><%= params[:category].presence || "すべて" %>のシゴト</h1>
+<div>
+  <h1><%= params[:category].presence || "すべて" %>のシゴト</h1>
 
-  <div id="parttime_jobs" class="space-y-6">
+  <div id="parttime_jobs" class="grid grid-cols-1 gap-4">
     <% @parttime_jobs.each do |parttime_job| %>
-      <div class="border-b pb-4">
-        <h2 class="text-xl font-semibold"><%= parttime_job.name %></h2>
-        <p class="text-gray-600">職種: <%= parttime_job.category %></p>
-        <%= link_to "▶ 詳細を見る", parttime_job_path(parttime_job), class: "text-blue-600 hover:underline text-sm" %>
-      </div>
+      <%= link_to parttime_job_path(parttime_job), class: "block" do %>
+        <div class="flex items-center border border-[2px] rounded-[12px] sm:p-6 p-4 hover:bg-gray-100">
+          <p class="text-[1.383rem] font-bold"><%= parttime_job.name %></p>
+          <div class="flex items-center ml-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 
   <div class="mt-10">
-    <%= link_to "＋ お仕事を追加", new_parttime_job_path, class: "text-blue-700 font-medium hover:underline" %>
+    <%= link_to "お仕事を追加", new_parttime_job_path, class: "block text-center w-full mt-12 bg-blue-600 text-white px-4 py-2 rounded-[8px] hover:bg-blue-600" %>
   </div>
 </div>
-
