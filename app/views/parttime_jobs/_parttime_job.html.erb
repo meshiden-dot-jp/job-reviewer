@@ -4,8 +4,8 @@
     <%= parttime_job.name %>
   </h1>
 <% if logged_in? %>
-    <div class="flex pt-10">
-      <%= link_to "シゴトを編集", edit_parttime_job_path(@parttime_job) ,class:"border-b" %>
+    <div class="flex pt-16">
+      <%= link_to "シゴトを編集", edit_parttime_job_path(@parttime_job) ,class:"text-sm font-bold px-4 py-1 hover:bg-gray-100/50 bg-gray-100 rounded-[8px]" %>
     </div>
 
   <% else %>
@@ -13,9 +13,17 @@
   <% end %>
   </div>
 
-  <p>
-    <strong>職種:</strong>
-    <%= parttime_job.category %>
+  <p class="border-t border-gray-200 pb-4 text-sm">
+    <div class="flex justify-between">
+      <div>
+        <strong>職種:</strong>
+        <%= parttime_job.category %>
+      </div>
+      <div>
+          <%= link_to "評価順", parttime_job_path(@parttime_job, sort: 'rating', direction: toggle_direction(params[:sort], params[:direction], 'rating')) %> |
+          <%= link_to "投稿順", parttime_job_path(@parttime_job, sort: 'created_at', direction: toggle_direction(params[:sort], params[:direction], 'created_at')) %> 
+      </div>
+    </div>
   </p>
 
 </div>

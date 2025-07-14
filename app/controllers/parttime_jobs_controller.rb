@@ -15,6 +15,11 @@ class ParttimeJobsController < ApplicationController
   def show
     @review = Review.new
     @reviews = @parttime_job.reviews.includes(:user)
+
+    sort = params[:sort] || 'created_at'
+    direction = params[:direction] == 'asc' ? 'asc' : 'desc'
+
+    @reviews = @parttime_job.reviews.includes(:user).order("#{sort} #{direction}")
   end
 
   # GET /parttime_jobs/new

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Job" %></title>
+    <title>Jobs Reviewer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -25,7 +25,7 @@
   <body class="flex flex-col min-h-screen">
     <%= render HeaderComponent.new %>
     <main class="w-full bg-[#f5f6f6] block flex-grow">
-      <div class="sm:w-[70%] w-full m-auto">
+      <div class="sm:max-w-[800px] sm:w-[70%] w-full m-auto">
         <div class="pt-[60px]">
           <div class=" bg-white my-8 pb-16 sm:px-16 px-4 sm:rounded-[8px]">
             <%= yield %>

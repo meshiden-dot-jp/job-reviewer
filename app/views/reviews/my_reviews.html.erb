@@ -2,8 +2,8 @@
 
 <% if @reviews.present? %>
   <% @reviews.each do |review| %>
-    <div style="margin-bottom: 20px;">
-      <h3><%= link_to review.parttime_job.name, parttime_job_path(review.parttime_job) %></h3>
+    <div class="border-b border-gray-300 py-4 last:border-b-0">
+      <p class="font-bold"><%= review.parttime_job.name %></p>
       <p><strong>内容：</strong> <%= review.content %></p>
       <p><strong>評価：</strong>
         <% 5.times do |i| %>
