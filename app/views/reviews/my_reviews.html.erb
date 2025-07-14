@@ -1,0 +1,17 @@
+<h1>自分のレビュー</h1>
+
+<% if @reviews.present? %>
+  <% @reviews.each do |review| %>
+    <div style="margin-bottom: 20px;">
+      <h3><%= link_to review.parttime_job.name, parttime_job_path(review.parttime_job) %></h3>
+      <p><strong>内容：</strong> <%= review.content %></p>
+      <p><strong>評価：</strong>
+        <% 5.times do |i| %>
+          <%= i < review.rating ? "★" : "☆" %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+<% else %>
+  <p>まだレビューがありません。</p>
+<% end %>

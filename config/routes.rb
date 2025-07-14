@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   resources :users
   resources :reviews
   resources :parttime_jobs do
-    resources :reviews, only: [:create]
+  resources :reviews, only: [:create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "my_reviews", to: "reviews#my_reviews"
   get    'login',  to: 'sessions#new'
   post   'login',  to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
