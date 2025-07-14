@@ -1,12 +1,11 @@
 <% content_for :title, "Editing parttime job" %>
 
-<h1>Editing parttime job</h1>
+<h1>シゴトを編集する</h1>
 
 <%= render "form", parttime_job: @parttime_job %>
 
 <br>
 
-<div>
-  <%= link_to "Show this parttime job", @parttime_job %> |
-  <%= link_to "Back to parttime jobs", parttime_jobs_path %>
+<div class="text-center">
+  <%= link_to "戻る", @parttime_job ,class: "border-b" %>
 </div>

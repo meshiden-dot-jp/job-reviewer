@@ -1,7 +1,17 @@
 <div id="<%= dom_id parttime_job %>">
-  <h1>
+  <div class="flex items-center justify-between">
+      <h1>
     <%= parttime_job.name %>
   </h1>
+<% if logged_in? %>
+    <div class="flex pt-10">
+      <%= link_to "シゴトを編集", edit_parttime_job_path(@parttime_job) ,class:"border-b" %>
+    </div>
+
+  <% else %>
+
+  <% end %>
+  </div>
 
   <p>
     <strong>職種:</strong>
