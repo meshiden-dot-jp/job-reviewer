@@ -42,6 +42,10 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
+
+RUN chmod +x bin/rails
+RUN chmod +x bin/*
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
@@ -58,8 +62,6 @@ FROM base
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
 
-RUN chmod +x bin/rails
-RUN chmod +x bin/*
 
 
 # Run and own only the runtime files as a non-root user for security
