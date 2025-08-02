@@ -48890,3 +48890,57 @@ Completed 200 OK in 41ms (Views: 11.5ms | ActiveRecord: 0.6ms (3 queries, 0 cach
 
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-07-20 13:33:17 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Job'*/[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 182.8ms | GC: 0.0ms)
+Completed 200 OK in 1448ms (Views: 259.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application.tailwind-af4b0301.css" for 127.0.0.1 at 2025-07-20 13:33:19 +0900
+Started GET "/assets/tailwind-73300d36.css" for 127.0.0.1 at 2025-07-20 13:33:19 +0900
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.woff2' for missing asset 'fonts/LINESeedJP_OTF_Rg.woff2' in application.tailwind.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Rg.ttf' for missing asset 'fonts/LINESeedJP_OTF_Rg.ttf' in application.tailwind.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.woff2' for missing asset 'fonts/LINESeedJP_OTF_Bd.woff2' in application.tailwind.css
+Unable to resolve '/fonts/LINESeedJP_OTF_Bd.ttf' for missing asset 'fonts/LINESeedJP_OTF_Bd.ttf' in application.tailwind.css
+Started GET "/parttime_jobs?category=%E9%A3%B2%E9%A3%9F" for 127.0.0.1 at 2025-07-20 13:33:23 +0900
+Processing by ParttimeJobsController#index as HTML
+  Parameters: {"category" => "飲食"}
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/index.html.erb within layouts/application
+  [1m[36mParttimeJob Load (0.2ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" WHERE "parttime_jobs"."category" = '飲食' /*action='index',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/index.html.erb:7
+  Rendered parttime_jobs/index.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 162.7ms | GC: 0.0ms)
+Completed 200 OK in 1065ms (Views: 166.6ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/parttime_jobs/1" for 127.0.0.1 at 2025-07-20 13:33:25 +0900
+Processing by ParttimeJobsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mParttimeJob Load (0.2ms)[0m  [1m[34mSELECT "parttime_jobs".* FROM "parttime_jobs" WHERE "parttime_jobs"."id" = 1 LIMIT 1 /*action='show',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/controllers/parttime_jobs_controller.rb:76:in 'ParttimeJobsController#set_parttime_job'
+  Rendering layout layouts/application.html.erb
+  Rendering parttime_jobs/show.html.erb within layouts/application
+  Rendered parttime_jobs/_parttime_job.html.erb (Duration: 2.8ms | GC: 0.0ms)
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."parttime_job_id" = 1 ORDER BY created_at desc /*action='show',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/show.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (8, 11, 5, 4) /*action='show',application='Job',controller='parttime_jobs'*/[0m
+  ↳ app/views/parttime_jobs/show.html.erb:4
+  Rendered parttime_jobs/show.html.erb within layouts/application (Duration: 340.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 349.5ms | GC: 0.0ms)
+Completed 200 OK in 1221ms (Views: 349.2ms | ActiveRecord: 2.0ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-07-20 13:33:35 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 200 OK in 573ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
